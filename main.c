@@ -24,22 +24,22 @@ int main()
 {
     SetConsoleOutputCP(1251);
     srand(time(NULL));
-    printf("%s\n\n","Алготм перемножения матриц методом Штрассена");
+    printf("%s\n\n","РђР»РіРѕС‚Рј РїРµСЂРµРјРЅРѕР¶РµРЅРёСЏ РјР°С‚СЂРёС† РјРµС‚РѕРґРѕРј РЁС‚СЂР°СЃСЃРµРЅР°");
     int menu;
     while(TRUE){
-        printf("%s\n","Выберите один из пунктов");
-        printf("%s\n","1-Задать матрицы");
-        printf("%s\n","2-Перемножить матрицы и отобразить");
-        printf("%s\n","3-Отобразить матрицы");
-        printf("%s\n","0-Выход");
+        printf("%s\n","Р’С‹Р±РµСЂРёС‚Рµ РѕРґРёРЅ РёР· РїСѓРЅРєС‚РѕРІ");
+        printf("%s\n","1-Р—Р°РґР°С‚СЊ РјР°С‚СЂРёС†С‹");
+        printf("%s\n","2-РџРµСЂРµРјРЅРѕР¶РёС‚СЊ РјР°С‚СЂРёС†С‹ Рё РѕС‚РѕР±СЂР°Р·РёС‚СЊ");
+        printf("%s\n","3-РћС‚РѕР±СЂР°Р·РёС‚СЊ РјР°С‚СЂРёС†С‹");
+        printf("%s\n","0-Р’С‹С…РѕРґ");
         if((scanf("%d",&menu)==0)||(menu<0)||(menu>3)){
-                printf("%s\n","Некорректный ввод");
+                printf("%s\n","РќРµРєРѕСЂСЂРµРєС‚РЅС‹Р№ РІРІРѕРґ");
                 if(getchar()!='\n')
                 while(getchar()!='\n');
                 continue;
             }
         if(getchar()!='\n'){
-            printf("%s\n","Некорректный ввод");
+            printf("%s\n","РќРµРєРѕСЂСЂРµРєС‚РЅС‹Р№ РІРІРѕРґ");
             while(getchar()!='\n');
             continue;
         }
@@ -61,33 +61,33 @@ int main()
 }
 
 void showMatrixs(){
-    if(a1==NULL&&b1==NULL) {printf("%s\n","Матрицы не созданы");return;}
+    if(a1==NULL&&b1==NULL) {printf("%s\n","РњР°С‚СЂРёС†С‹ РЅРµ СЃРѕР·РґР°РЅС‹");return;}
     int menu;
     while(TRUE){
-        printf("%s\n","1-Отобразить 1 матрицу");
-        printf("%s\n","2-Отобразить 2 матрицу");
-        printf("%s\n","0-Выйти");
+        printf("%s\n","1-РћС‚РѕР±СЂР°Р·РёС‚СЊ 1 РјР°С‚СЂРёС†Сѓ");
+        printf("%s\n","2-РћС‚РѕР±СЂР°Р·РёС‚СЊ 2 РјР°С‚СЂРёС†Сѓ");
+        printf("%s\n","0-Р’С‹Р№С‚Рё");
         if((scanf("%d",&menu)==0)||(menu<0)||(menu>2)){
-            printf("%s\n","Некорректный ввод");
+            printf("%s\n","РќРµРєРѕСЂСЂРµРєС‚РЅС‹Р№ РІРІРѕРґ");
             if(getchar()!='\n')
             while(getchar()!='\n');
             continue;
         }
         if(getchar()!='\n'){
-            printf("%s\n","Некорректный ввод");
+            printf("%s\n","РќРµРєРѕСЂСЂРµРєС‚РЅС‹Р№ РІРІРѕРґ");
             while(getchar()!='\n');
             continue;
         }
         switch(menu){
             case 1:
-                if(a1==NULL) printf("%s\n","Матрица не создана");
+                if(a1==NULL) printf("%s\n","РњР°С‚СЂРёС†Р° РЅРµ СЃРѕР·РґР°РЅР°");
                 else {
                     printf("%s\n","A");
                     print(a1,sqrtSize_a);
                 }
                 break;
             case 2:
-                if(b1==NULL) printf("%s\n","Матрица не создана");
+                if(b1==NULL) printf("%s\n","РњР°С‚СЂРёС†Р° РЅРµ СЃРѕР·РґР°РЅР°");
                 else {
                     printf("%s\n","B");
                     print(b1,sqrtSize_b);
@@ -102,17 +102,17 @@ void showMatrixs(){
 void zadatMatrix(){
     int menu;
     while(TRUE){
-        printf("%s\n","1-Задать 1 матрицу");
-        printf("%s\n","2-Задать 2 матрицу");
-        printf("%s\n","0-Выйти");
+        printf("%s\n","1-Р—Р°РґР°С‚СЊ 1 РјР°С‚СЂРёС†Сѓ");
+        printf("%s\n","2-Р—Р°РґР°С‚СЊ 2 РјР°С‚СЂРёС†Сѓ");
+        printf("%s\n","0-Р’С‹Р№С‚Рё");
         if((scanf("%d",&menu)==0)||(menu<0)||(menu>2)){
-            printf("%s\n","Некорректный ввод");
+            printf("%s\n","РќРµРєРѕСЂСЂРµРєС‚РЅС‹Р№ РІРІРѕРґ");
             if(getchar()!='\n')
             while(getchar()!='\n');
             continue;
         }
         if(getchar()!='\n'){
-            printf("%s\n","Некорректный ввод");
+            printf("%s\n","РќРµРєРѕСЂСЂРµРєС‚РЅС‹Р№ РІРІРѕРґ");
             while(getchar()!='\n');
             continue;
         }
@@ -131,42 +131,42 @@ void zadatMatrix(){
 
 void zadatMatrixs(int chois){
     int value,rows,colums;
-    printf("%s\n","Введите кол-во строк");
+    printf("%s\n","Р’РІРµРґРёС‚Рµ РєРѕР»-РІРѕ СЃС‚СЂРѕРє");
     while(TRUE){
         if((scanf("%d",&rows)==0)||(rows<=0)){
-            printf("%s\n","Некорректный ввод, повторите ввод");
+            printf("%s\n","РќРµРєРѕСЂСЂРµРєС‚РЅС‹Р№ РІРІРѕРґ, РїРѕРІС‚РѕСЂРёС‚Рµ РІРІРѕРґ");
             if(getchar()!='\n')
             while(getchar()!='\n');
             continue;
         }
         if(getchar()!='\n'){
-            printf("%s\n","Некорректный ввод, повторите ввод");
+            printf("%s\n","РќРµРєРѕСЂСЂРµРєС‚РЅС‹Р№ РІРІРѕРґ, РїРѕРІС‚РѕСЂРёС‚Рµ РІРІРѕРґ");
             while(getchar()!='\n');
             continue;
         }
         break;
     }
-    printf("%s\n","Введите кол-во столбцов");
+    printf("%s\n","Р’РІРµРґРёС‚Рµ РєРѕР»-РІРѕ СЃС‚РѕР»Р±С†РѕРІ");
     while(TRUE){
         if((scanf("%d",&colums)==0)||(colums<=0)){
-            printf("%s\n","Некорректный ввод, повторите ввод");
+            printf("%s\n","РќРµРєРѕСЂСЂРµРєС‚РЅС‹Р№ РІРІРѕРґ, РїРѕРІС‚РѕСЂРёС‚Рµ РІРІРѕРґ");
             if(getchar()!='\n')
             while(getchar()!='\n');
             continue;
         }
         if(getchar()!='\n'){
-            printf("%s\n","Некорректный ввод, повторите ввод");
+            printf("%s\n","РќРµРєРѕСЂСЂРµРєС‚РЅС‹Р№ РІРІРѕРґ, РїРѕРІС‚РѕСЂРёС‚Рµ РІРІРѕРґ");
             while(getchar()!='\n');
             continue;
         }
         break;
     }
     if(rows!=colums) {
-        printf("%s\n","Матрица не квадратная. Алгоритм работает на квадратных матрицах.Повторите ввод");
+        printf("%s\n","РњР°С‚СЂРёС†Р° РЅРµ РєРІР°РґСЂР°С‚РЅР°СЏ. РђР»РіРѕСЂРёС‚Рј СЂР°Р±РѕС‚Р°РµС‚ РЅР° РєРІР°РґСЂР°С‚РЅС‹С… РјР°С‚СЂРёС†Р°С….РџРѕРІС‚РѕСЂРёС‚Рµ РІРІРѕРґ");
         zadatMatrixs(chois);
         return;
     }
-    /*сoздание матрицы*/
+    /*СЃoР·РґР°РЅРёРµ РјР°С‚СЂРёС†С‹*/
     if(chois==1){
         a1=malloc(sizeof(int)*colums*rows);
         sqrtSize_a=rows;
@@ -175,20 +175,20 @@ void zadatMatrixs(int chois){
         b1=malloc(sizeof(int)*colums*rows);
         sqrtSize_b=rows;
     }
-    /*заполнение матрицы*/
+    /*Р·Р°РїРѕР»РЅРµРЅРёРµ РјР°С‚СЂРёС†С‹*/
     int i,j;
     for(i=0;i<rows;i++)
         for(j=0;j<colums;j++){
             printf("[%d][%d]",i+1,j+1);
             while(TRUE){
                 if((scanf("%d",&value)==0)){
-                printf("%s\n","Некорректный ввод, повторите ввод");
+                printf("%s\n","РќРµРєРѕСЂСЂРµРєС‚РЅС‹Р№ РІРІРѕРґ, РїРѕРІС‚РѕСЂРёС‚Рµ РІРІРѕРґ");
                 if(getchar()!='\n')
                 while(getchar()!='\n');
                 continue;
             }
             if(getchar()!='\n'){
-                printf("%s\n","Некорректный ввод, повторите ввод");
+                printf("%s\n","РќРµРєРѕСЂСЂРµРєС‚РЅС‹Р№ РІРІРѕРґ, РїРѕРІС‚РѕСЂРёС‚Рµ РІРІРѕРґ");
                 while(getchar()!='\n');
                 continue;
             }
@@ -204,32 +204,32 @@ void multiplicationAndShow(){
     int menu;
     int size;
     while(TRUE){
-        printf("%s\n","1-Сгенерить матрицы и перемножить");
-        printf("%s\n","2-Перемножить уже существующие");
-        printf("%s\n","0-Выйти");
+        printf("%s\n","1-РЎРіРµРЅРµСЂРёС‚СЊ РјР°С‚СЂРёС†С‹ Рё РїРµСЂРµРјРЅРѕР¶РёС‚СЊ");
+        printf("%s\n","2-РџРµСЂРµРјРЅРѕР¶РёС‚СЊ СѓР¶Рµ СЃСѓС‰РµСЃС‚РІСѓСЋС‰РёРµ");
+        printf("%s\n","0-Р’С‹Р№С‚Рё");
         if((scanf("%d",&menu)==0)||(menu<0)||(menu>2)){
-                printf("%s\n","Некорректный ввод");
+                printf("%s\n","РќРµРєРѕСЂСЂРµРєС‚РЅС‹Р№ РІРІРѕРґ");
                 if(getchar()!='\n')
                 while(getchar()!='\n');
                 continue;
             }
             if(getchar()!='\n'){
-                printf("%s\n","Некорректный ввод");
+                printf("%s\n","РќРµРєРѕСЂСЂРµРєС‚РЅС‹Р№ РІРІРѕРґ");
                 while(getchar()!='\n');
                 continue;
             }
         switch(menu){
         case 1:
-            printf("%s\n","Введите размер умножаемых матриц");
+            printf("%s\n","Р’РІРµРґРёС‚Рµ СЂР°Р·РјРµСЂ СѓРјРЅРѕР¶Р°РµРјС‹С… РјР°С‚СЂРёС†");
             while(TRUE){
                 if((scanf("%d",&size)==0)||(size<=0)){
-                printf("%s\n","Некорректный ввод, повторите ввод");
+                printf("%s\n","РќРµРєРѕСЂСЂРµРєС‚РЅС‹Р№ РІРІРѕРґ, РїРѕРІС‚РѕСЂРёС‚Рµ РІРІРѕРґ");
                 if(getchar()!='\n')
                 while(getchar()!='\n');
                 continue;
             }
                 if(getchar()!='\n'){
-                printf("%s\n","Некорректный ввод, повторите ввод");
+                printf("%s\n","РќРµРєРѕСЂСЂРµРєС‚РЅС‹Р№ РІРІРѕРґ, РїРѕРІС‚РѕСЂРёС‚Рµ РІРІРѕРґ");
                 while(getchar()!='\n');
                 continue;
                 }
@@ -248,9 +248,9 @@ void multiplicationAndShow(){
             break;
         case 2:
             if(a1==NULL||b1==NULL)
-                printf("%s\n","Одна из матриц не создана или обе");
+                printf("%s\n","РћРґРЅР° РёР· РјР°С‚СЂРёС† РЅРµ СЃРѕР·РґР°РЅР° РёР»Рё РѕР±Рµ");
             else if(sqrtSize_a!=sqrtSize_b)
-                printf("%s\n","Данные матрицы не можно перемножить ибо кл-во строк в первой не равно кол-ву столбцов во второй и наоборот");
+                printf("%s\n","Р”Р°РЅРЅС‹Рµ РјР°С‚СЂРёС†С‹ РЅРµ РјРѕР¶РЅРѕ РїРµСЂРµРјРЅРѕР¶РёС‚СЊ РёР±Рѕ РєР»-РІРѕ СЃС‚СЂРѕРє РІ РїРµСЂРІРѕР№ РЅРµ СЂР°РІРЅРѕ РєРѕР»-РІСѓ СЃС‚РѕР»Р±С†РѕРІ РІРѕ РІС‚РѕСЂРѕР№ Рё РЅР°РѕР±РѕСЂРѕС‚");
             else{
             a=createMatrSinglSize(a1,sqrtSize_a);
             b=createMatrSinglSize(b1,sqrtSize_b);

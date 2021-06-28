@@ -1,0 +1,14 @@
+# depslib dependency file v1.0
+1512994200 source:c:\users\Максим\desktop\Новая папка (2)\kurs\main.c
+	<stdio.h>
+	<stdlib.h>
+	<math.h>
+	<windows.h>
+
+1513522167 source:c:\users\Максим\desktop\Алг курсач\kurs\main.c
+	<stdio.h>
+	<stdlib.h>
+	<math.h>
+	<windows.h>
+	<sys/time.h>
+
